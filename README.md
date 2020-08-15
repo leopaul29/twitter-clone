@@ -1,5 +1,28 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# React Twitter Clone
+
+From https://www.youtube.com/watch?v=rJjaqSTzOxI
+
+## Technologies used
+
+firebase for database and hosting (firestore=realtime firestore database to store comments)
+material ui = icone and design
+reactjs
+react flip move for animations
+css3 variables
+
+## Steps
+
+npx create-react-app twitter-clone
+
+cd twitter-clone
+npm start
+
+BEM convention???
+
+twitter is split in 3 main components (sidebar, feeds, widget)
+
 ## Available Scripts
 
 In the project directory, you can run:
