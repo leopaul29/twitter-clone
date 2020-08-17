@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
+import Sidebar from "./Sidebar";
 
 function App() {
   return (
     // BEM
     <div className="app">
-      <h1>hello word</h1>
-
       {/* sidebar */}
+      <Sidebar/>
 
       {/* feed */}
 
