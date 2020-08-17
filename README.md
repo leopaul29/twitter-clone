@@ -23,6 +23,9 @@ BEM convention???
 
 twitter is split in 3 main components (sidebar, feeds, widget)
 
+for the sidebar we need icons with materialui
+https://material-ui.com/
+
 ## Available Scripts
 
 In the project directory, you can run:
