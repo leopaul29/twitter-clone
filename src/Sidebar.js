@@ -17,7 +17,7 @@ export default class Sidebar extends Component {
         return (
             <div className="sidebar">
                 {/* Twitter icon */}
-                <TwitterIcon/>
+                <TwitterIcon className='sidebar__twitterIcon'/>
 
                 {/* SidebarOption */}
                 <SidebarOption active Icon={HomeIcon} text="Home"/>
