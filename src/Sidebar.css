@@ -25,6 +25,10 @@
     color: var(--twitter-color);
 }
 
+.sidebar {
+    border-right: 1px solid var(--twitter-background);
+}
+
 .sidebar__tweet {
     background-color: var(--twitter-color) !important;
     border: none !important;
