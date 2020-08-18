@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import "./Feed.css";
 import TweetBox from "./TweetBox";
 import Post from "./Post";
@@ -12,19 +12,27 @@ function Feed() {
             </div>
 
             {/* TweetBox */}
-            <TweetBox/>
+            <TweetBox />
 
             {/* Post */}
-            <Post displayName="displayName" username="username" verified="true" timestamp="timestamp" text="post text" image="image" avatar="avatar"/>
+            <Post
+                displayName="displayName"
+                username="username"
+                verified="true"
+                timestamp="timestamp"
+                text="post text"
+                image="image"
+                avatar="avatar"
+            />
             {/* Post */}
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/>
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
         </div>
-    )
+    );
 }
 
-export default Feed
+export default Feed;
