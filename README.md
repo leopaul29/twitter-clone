@@ -6,9 +6,9 @@ From https://www.youtube.com/watch?v=rJjaqSTzOxI
 
 ## Technologies used
 
+ReactJs
 firebase for database and hosting (firestore=realtime firestore database to store comments)
 material ui = icone and design
-reactjs
 react flip move for animations
 css3 variables
 
