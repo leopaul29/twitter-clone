@@ -19,12 +19,24 @@ npx create-react-app twitter-clone
 cd twitter-clone
 npm start
 
-BEM convention???
+use CSS BEM convention (check http://getbem.com/naming/)
 
 twitter is split in 3 main components (sidebar, feeds, widget)
 
 for the sidebar we need icons with materialui
 https://material-ui.com/
+
+install twitter features such as 
+    TwitterTimelineEmbed,
+    TwitterShareButton,
+    TwitterTweetEmbed with
+npm i react-twitter-embed
+
+install firebase for backend connexion with
+npm i firebase
+
+install flip-move with 
+npm i react-flip-move
 
 ## Available Scripts
 
