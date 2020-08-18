@@ -23,7 +23,7 @@ use CSS BEM convention (check http://getbem.com/naming/)
 
 twitter is split in 3 main components (sidebar, feeds, widget)
 
-for the sidebar we need icons with materialui
+for the sidebar we need icons with materialUI
 https://material-ui.com/
 
 install twitter features such as 
@@ -32,11 +32,26 @@ install twitter features such as
     TwitterTweetEmbed with
 npm i react-twitter-embed
 
-install firebase for backend connexion with
+install firebase for backend with
 npm i firebase
+firebase login
 
-install flip-move with 
+install flip-move for a smooth animation when tweet with 
 npm i react-flip-move
+
+to deploy firebase with following command in console
+firebase init
+yes to proceed
+? Hosting: Configure and deploy Firebase Hosting sites
+? Use an existing project
+? twitter-clone-4fb96 (twitter-clone)
+? What do you want to use as your public directory? build
+? Configure as a single-page app ? Yes
+
+clean and create the version to deploy with
+npm run build
+after any update, run the command again and deploy with
+firebase deploy
 
 ## Available Scripts
 
