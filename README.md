@@ -2,56 +2,51 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # React Twitter Clone
 
-From https://www.youtube.com/watch?v=rJjaqSTzOxI
+Follow along the youtube tutorial and setup the firebase app
+- https://www.youtube.com/watch?v=rJjaqSTzOxI
 
 ## Technologies used
 
-ReactJs
-firebase for database and hosting (firestore=realtime firestore database to store comments)
-material ui = icone and design
-react flip move for animations
-css3 variables
+- ReactJs
+- Firebase for database and hosting (firestore=realtime firestore database to store comments)
+- Material ui (https://material-ui.com/)
+- React flip move for animations
+- CSS3 variables 
+- use CSS BEM convention (check http://getbem.com/naming/)
 
 ## Steps
-
+Create react app sample and start the app
+```
 npx create-react-app twitter-clone
-
 cd twitter-clone
 npm start
+```
+Install twitter features such as TwitterTimelineEmbed, TwitterShareButton, TwitterTweetEmbed with
+`npm i react-twitter-embed`
 
-use CSS BEM convention (check http://getbem.com/naming/)
+Install firebase for backend with
+`npm i firebase`
 
-twitter is split in 3 main components (sidebar, feeds, widget)
-
-for the sidebar we need icons with materialUI
-https://material-ui.com/
-
-install twitter features such as 
-    TwitterTimelineEmbed,
-    TwitterShareButton,
-    TwitterTweetEmbed with
-npm i react-twitter-embed
-
-install firebase for backend with
-npm i firebase
-firebase login
+Login the app with firebase
+`firebase login`
 
 install flip-move for a smooth animation when tweet with 
-npm i react-flip-move
+`npm i react-flip-move`
 
-to deploy firebase with following command in console
+deploy firebase with following command in console
+```
 firebase init
-yes to proceed
+Enter yes to proceed
 ? Hosting: Configure and deploy Firebase Hosting sites
 ? Use an existing project
 ? twitter-clone-4fb96 (twitter-clone)
 ? What do you want to use as your public directory? build
 ? Configure as a single-page app ? Yes
-
+```
 clean and create the version to deploy with
-npm run build
+`npm run build`
 after any update, run the command again and deploy with
-firebase deploy
+`firebase deploy`
 
 ## Available Scripts
 
