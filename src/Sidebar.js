@@ -30,7 +30,7 @@ export default class Sidebar extends Component {
                 <SidebarOption Icon={MoreHorizIcon} text="Plus"/>
 
                 {/* Button tweet */}
-                <Button variant='outline' className='sidebar__tweet' fullWidth>Tweet</Button>
+                <Button variant='outlined' className='sidebar__tweet' fullWidth>Tweet</Button>
             </div>
         )
     }

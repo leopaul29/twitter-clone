@@ -26,7 +26,7 @@ function TweetBox() {
 
     return (
         <div className="tweetBox">
-            <from>
+            <form>
                 <div className="tweetBox__input">
                     <Avatar src="" />
                     <input
@@ -46,7 +46,7 @@ function TweetBox() {
                 <Button onClick={sendTweet} className="tweetBox__tweetButton">
                     Tweet
                 </Button>
-            </from>
+            </form>
         </div>
     );
 }
