@@ -1,51 +1,68 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./TweetBox.css";
 import { Avatar, Button } from "@material-ui/core";
 import db from "./firebase";
 
 function TweetBox() {
-    const [tweetMessage, setTweetMessage] = useState([]);
+    const [username, setUsername] = useState("");
+    const [tweetMessage, setTweetMessage] = useState("");
     const [tweetImage, setTweetImage] = useState("");
+
+    useEffect(() => {
+        let username = prompt("Please enter your name");
+        console.log(username);
+        if (username == "") username = "Unknown";
+        setUsername(username);
+      }, []);
 
     const sendTweet = (e) => {
         e.preventDefault();
 
+        if(tweetMessage === "") return;
+
+        var today = new Date();
+
         db.collection("posts").add({
-            displayName: "Leo",
-            username: "leo",
+            displayName: username,
+            username: username,
             verified: true,
             text: tweetMessage,
             image: tweetImage,
             avatar:
-                "https://img.icons8.com/officel/16/000000/circled-user-male-skin-type-6.png",
+                "https://eu.ui-avatars.com/api/?name="+username+"&background=50b7f5&color=fff",
+            date: today
         });
-
+        
         setTweetMessage("");
         setTweetImage("");
     };
 
     return (
         <div className="tweetBox">
-            <form>
+            <div className="tweetBox__avatar">
+                <Avatar src="" />
+            </div>
+            <form className="tweetBox__form">
                 <div className="tweetBox__input">
-                    <Avatar src="" />
-                    <input
+                    <textarea
+                        className="tweetBox__textarea"
                         onChange={(e) => setTweetMessage(e.target.value)}
                         value={tweetMessage}
-                        placeholder="what's happening?"
-                        type="text"
+                        placeholder="What's happening?"
                     />
                 </div>
-                <input
-                    value={tweetImage}
-                    onChange={(e) => setTweetImage(e.target.value)}
-                    className="tweetBox__imageInput"
-                    placeholder="Optional: Enter image URL"
-                    type="text"
-                />
-                <Button onClick={sendTweet} className="tweetBox__tweetButton">
-                    Tweet
-                </Button>
+                <div className="tweetBox__bottom">
+                    <input
+                        value={tweetImage}
+                        onChange={(e) => setTweetImage(e.target.value)}
+                        className="tweetBox__imageInput"
+                        placeholder="Optional: Enter image URL"
+                        type="text"
+                        />
+                    <Button onClick={sendTweet} className="tweetBox__tweetButton">
+                        Tweet
+                    </Button>
+                </div>
             </form>
         </div>
     );

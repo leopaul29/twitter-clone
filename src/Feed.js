@@ -9,7 +9,17 @@ function Feed() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        db.collection("posts").onSnapshot((snapshot) =>
+        let yesterday = new Date();
+        yesterday.setDate(yesterday.getDate()-2);
+        console.log("yesterday", yesterday)
+
+        db.collection('posts').where("date", '<', yesterday).get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                doc.ref.delete();
+            });
+        });
+
+        db.collection("posts").where("date", '>', yesterday).onSnapshot((snapshot) =>
             setPosts(snapshot.docs.map((doc) => doc.data()))
         );
     }, []);
@@ -25,7 +35,7 @@ function Feed() {
             <FlipMove>
                 {posts.map((post) => (
                     <Post
-                    // key={Post.id}
+                        key={post.id}
                         key={post.text}
                         displayName={post.displayName}
                         username={post.username}
